@@ -21,8 +21,8 @@
                 <div class="w-1/2 mx-auto mb-10">
                     <div class="flex justify-center">
                         @foreach($stages as $stage)
-                            <buttton class="space-y-8 bg-white/60 px-10 py-4  text-center cursor-pointer shadow-xl shadow-blue-900/5 backdrop-blur first:rounded-l last:rounded-r rtl:rounded-r rtl:rounded-l shadow-lg
-                                        @if($stage_id == $stage->id) bg-[#0dbecc] text-white @endif"
+                            <buttton class="space-y-8 bg-white/60 px-10 py-4  text-center cursor-pointer shadow-xl shadow-blue-900/5 backdrop-blur first:rounded-l last:rounded-r rtl:rounded-r rtl:rounded-l shadow-lg"
+                                     style="@if($stage_id == $stage->id) background: #0dbecc; color: #ffffff; @endif"
 
                                      wire:click="changeStage({{$stage->id}})" wire:model="stage_id.{{ $stage->id }}">
                                 {{ $stage->name }}
