@@ -26,9 +26,9 @@
                     {{ __('home.hero.description') }}
                 </p>
                 <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
-                   href="#">{{ __('home.header.register_now') }}</a>
+                   href="{{ route('registration.index') }}" wire:navigate>{{ __('home.header.register_now') }}</a>
                 <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-2 w-full sm:hidden"
-                   href="#">{{ __('home.activities.title') }}</a>
+                   href="{{ route('activities.index') }}" wire:navigate>{{ __('home.activities.title') }}</a>
                 <dl class="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-center lg:text-left">
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.speakers') }}</dt>
