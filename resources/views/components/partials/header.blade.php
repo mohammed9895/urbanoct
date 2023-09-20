@@ -1,11 +1,22 @@
 <header class="container mx-auto relative z-50 flex-none lg:pt-11">
     <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center sm:items-center justify-between sm:justify-between lg:flex-nowrap">
         <div class="mt-10 lg:mt-0 lg:grow lg:basis-0">
-            <a href="#">
+            <a href="/">
                 <img src="{{ asset('images/logo-2.svg') }}" class="h-28 hover:scale-110 transition-all" alt="">
             </a>
         </div>
+       <div class="mt-10 lg:mt-0 lg:grow lg:basis-0 md:hidden" >
+           @if (session()->get('locale') == 'en')
+               <a href="{{ route('language.switch', 'ar') }}" class=" md:hidden inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70" >
+                   AR
+               </a>
+           @else
+               <a href="{{ route('language.switch', 'en') }}" class="md:hidden inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70" >
+                   EN
+               </a>
+           @endif
+       </div>
         <div
             class="order-first -mx-4 flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b border-uo-blue/10 py-4 font-mono text-sm text-uo-blue sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
             <div class="mx-auto flex items-center gap-4 px-4">

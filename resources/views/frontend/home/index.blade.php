@@ -13,19 +13,22 @@
         </div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-50">
             <div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 text-center">
-                <h1 class="font-display text-7xl font-bold tracking-tighter text-uo-blue lg:text-[115px]">
+                <h1 class="font-display text-5xl font-bold tracking-tighter text-uo-blue lg:text-[115px]">
                     <span class="sr-only">{{ __('home.hero.main_title') }} - </span>
                     {{ __('home.hero.main_title') }}
                 </h1>
-                <h1 class="font-display text-7xl font-bold tracking-tighter text-uo-red lg:text-[59px]">
+                <br class="hidden lg:block">
+                <h1 class="font-display mt-3 text-4xl font-bold tracking-tighter text-uo-red lg:text-[59px]">
                     <span class="sr-only">{{ __('home.hero.sub_title') }} - </span>
                     {{ __('home.hero.sub_title') }}
                 </h1>
                 <p class="text-md mt-5 text-slate-500">
                     {{ __('home.hero.description') }}
                 </p>
-                <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
-                   href="#">Get your tickets</a>
+                <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
+                   href="#">{{ __('home.header.register_now') }}</a>
+                <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-2 w-full sm:hidden"
+                   href="#">{{ __('home.activities.title') }}</a>
                 <dl class="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-center lg:text-left">
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.speakers') }}</dt>
