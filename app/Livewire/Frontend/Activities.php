@@ -8,8 +8,10 @@ use Livewire\Component;
 class Activities extends Component
 {
     public $activities;
+    public $title;
     public function mount()
     {
+        $this->title = __('home.activities.title');
         $this->activities = Activity::all();
     }
     public function render()

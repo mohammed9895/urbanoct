@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', \App\Livewire\Frontend\Home::class);
 
-Route::get('/activities', [\App\Http\Controllers\HomeController::class, 'activities'])->name('activities.index');
-Route::get('/registration', [\App\Http\Controllers\HomeController::class, 'registration'])->name('registration.index');
+Route::get('/activities', \App\Livewire\Frontend\Activities::class)->name('activities.index');
+Route::get('/registration', \App\Livewire\Frontend\Register::class)->name('registration.index');
 
 Route::get('/language/{locale}', function ($locale) {
     Session::put('locale', $locale);
