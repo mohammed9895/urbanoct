@@ -23,4 +23,9 @@ class Agenda extends Model
     {
         return $this->belongsTo(Day::class);
     }
+
+    public function speaker()
+    {
+        return $this->belongsTo(Speaker::class);
+    }
 }

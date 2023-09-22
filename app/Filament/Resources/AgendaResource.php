@@ -6,6 +6,7 @@ use App\Filament\Resources\AgendaResource\Pages;
 use App\Filament\Resources\AgendaResource\RelationManagers;
 use App\Models\Agenda;
 use App\Models\Day;
+use App\Models\Speaker;
 use App\Models\Stage;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -33,6 +34,10 @@ class AgendaResource extends Resource
                 Forms\Components\Select::make('stage_id')
                     ->required()
                     ->options(Stage::all()->pluck('name', 'id'))
+                    ->searchable(),
+                Forms\Components\Select::make('speaker_id')
+                    ->required()
+                    ->options(Speaker::all()->pluck('name', 'id'))
                     ->searchable(),
                 Forms\Components\TextInput::make('title')
                     ->required()

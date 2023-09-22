@@ -47,6 +47,7 @@
                                 </span>
                                </button>
                            </div>
+                           @error('email') <div class="mt-2 text-red-700">{{ $message }}</div> @enderror
                            @if (session()->has('success'))
                                <div class="mt-5 bg-green-300 text-green-700 p-6 rounded-3xl"> {{ session('success') }}</div>
                            @endif

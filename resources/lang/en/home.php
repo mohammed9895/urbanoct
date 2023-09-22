@@ -72,7 +72,22 @@ return [
         'string' => 'This field must be string',
         'integer' => 'This field must be integer',
         'email' => 'This field must be email',
-        'success' => 'This field must be email',
+        'success' => 'Registered Successfully',
+        'unique' => 'This field is already registered',
+    ],
+    'mail' => [
+        'registration' => [
+            'subject' => 'Welcome to Urban October',
+            'content' => "\nHey :fullname, \n\n
+            Urban October is here, and we can not wait to have you join us! \n \n
+            Date: 29 -31 Oct 2023 \n
+            Venue: OCEP \n \n
+            Get ready for an urban adventure like no other! We have got amazing speakers, interactive sessions, and surprises in store. \n \n
+            Have questions or need assistance? Reach out to us at info@urbanoct.com. \n
+            See you at the conference let us make October urban-tastic! \n \n
+            Cheers, \n
+            Urban October Team"
+        ]
     ]
 ];
 

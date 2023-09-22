@@ -43,7 +43,7 @@
                     <div
                         class="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3" role="tabpanel">
                         @foreach($speakers as $speaker)
-                            <div>
+                            <a href="{{route('speaker.index', $speaker)}}">
                                 <div class="group relative h-[17.5rem] transform overflow-hidden rounded-3xl">
                                     <div
                                         class="absolute bottom-6 left-0 right-4 top-0 rounded-3xl border transition duration-300 group-hover:scale-95 xl:right-6 border-uo-red"></div>
@@ -59,7 +59,7 @@
                                 </div>
                                 <h3 class="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">{{ $speaker->name }}</h3>
                                 <p class="mt-1 text-base tracking-tight text-slate-500">{{ $speaker->bio }}</p>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>

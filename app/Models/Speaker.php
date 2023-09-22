@@ -21,4 +21,9 @@ class Speaker extends Model
     {
         return $this->belongsTo(Day::class);
     }
+
+    public function agendas()
+    {
+        return $this->hasMany(Agenda::class);
+    }
 }
