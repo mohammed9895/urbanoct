@@ -43,5 +43,6 @@ class Register extends Component
         Mail::to($this->email)
             ->locale(app()->getLocale())
             ->queue(new Registration($this->fullname));
+        $this->reset();
     }
 }
