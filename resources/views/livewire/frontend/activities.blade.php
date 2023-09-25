@@ -18,6 +18,7 @@
                     <p class="mt-2 text-slate-500">
                         {{ $activity->description }}
                     </p>
+                    <a wire:click="$dispatch('openModal', { component: 'frontend.regsiter-model', arguments: { activity: {{$activity}} } })" class="inline-block mt-3 p-3 bg-uo-red rounded-md text-white hover:bg-uo-green transition cursor-pointer">{{ __('home.activities.register_button') }}</a>
                 </div>
             @endforeach
         </div>

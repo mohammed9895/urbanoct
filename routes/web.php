@@ -17,6 +17,8 @@ Route::get('/', \App\Livewire\Frontend\Home::class);
 
 Route::get('/activities', \App\Livewire\Frontend\Activities::class)->name('activities.index');
 Route::get('/registration', \App\Livewire\Frontend\Register::class)->name('registration.index');
+Route::get('/gallery', \App\Livewire\Frontend\Gallery::class)->name('gallery.index');
+Route::get('/feeds', \App\Livewire\Frontend\Feeds::class)->name('feeds.index');
 Route::get('/speaker/{speaker}', \App\Livewire\Frontend\Speaker::class)->name('speaker.index');
 
 Route::get('/language/{locale}', function ($locale) {

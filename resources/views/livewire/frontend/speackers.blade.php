@@ -3,10 +3,9 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 id="speakers-title"
-                    class="font-display text-4xl font-medium tracking-tighter text-uo-red sm:text-5xl">
+                    class="font-display text-4xl font-medium tracking-tighter text-uo-red sm:text-8xl">
                     {{ __('home.speakers.title') }}
                 </h2>
-                <p class="mt-4 font-display text-2xl tracking-tight text-blue-900">{{ __('home.speakers.description') }}</p>
             </div>
             <div
                 class="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4">
@@ -43,7 +42,8 @@
                     <div
                         class="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3" role="tabpanel">
                         @foreach($speakers as $speaker)
-                            <a href="{{route('speaker.index', $speaker)}}" wire:navigate>
+                            <a href="{{route('speaker.index', $speaker)}}" class="relative" wire:navigate>
+                                <img src="storage/{{ $speaker->topic->image }}" class="w-16 h-16 absolute z-50 -top-5 -left-5" alt="">
                                 <div class="group relative h-[17.5rem] transform overflow-hidden rounded-3xl">
                                     <div
                                         class="absolute bottom-6 left-0 right-4 top-0 rounded-3xl border transition duration-300 group-hover:scale-95 xl:right-6 border-uo-red"></div>
@@ -57,8 +57,9 @@
                                             src="storage/{{ $speaker->image }}">
                                     </div>
                                 </div>
-                                <h3 class="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">{{ $speaker->name }}</h3>
-                                <p class="mt-1 text-base tracking-tight text-slate-500">{{ $speaker->bio }}</p>
+                                <p class="mt-8 text-base tracking-tight text-slate-500">{{ $speaker->organization }}</p>
+                                <h3 class="mt-1 font-display text-xl font-bold tracking-tight text-slate-900">{{ $speaker->name }}</h3>
+                                <h3 class="mt-1 text-slate-500">{{ $speaker->agendas->first()->title }}</h3>
                             </a>
                         @endforeach
                     </div>

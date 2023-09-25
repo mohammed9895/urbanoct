@@ -3,32 +3,32 @@
 return [
     'header' => [
         'register_now' => 'Register Now',
-        'date' => '04 - 06 OCT 2023',
+        'date' => '29 - 31 OCT 2023',
         'location' => 'Muscat, Oman',
     ],
     'hero' => [
         'main_title' => 'Urban October',
-        'sub_title' => 'The first Gulf Urban week',
-        'description' => 'The first Gulf Housing Week is a major conference in October Urbanism, focused on promoting sustainable urban development and housing solutions in the Gulf region. The event brings together government officials, city planners, real estate professionals and academics to explore topics such as sustainable housing, affordability, smart cities, investment and regulation. It serves as a platform for innovation and collaboration, bringing about positive change in urbanization in the Gulf region.',
+        'sub_title' => 'The First Gulf Housing week',
+        'description' => 'Concurrent with the United Nations\' October events, which coincide with World Habitat Day, World Cities Day, and World Architecture Day, the overarching theme of "Building Better Cities, Enhancing Lives" is succeeded by Urban October\'s focus on "Urban Economic Resilience." This initiative aims to bring together urban planners, policymakers, industry experts, and professionals to explore innovative strategies and best practices promoting resilient urban economies within the regions.',
         'speakers' => 'Speakers',
         'people_attending' => 'People Attending',
         'venue' => 'Venue',
         'location' => 'Location',
-        'ocec' => 'OCEC',
+        'ocec' => "Oman Convention <br> & Exhibition Center",
         'muscat' => 'Muscat'
     ],
     'sponsors' => [
-        'title' => 'Current sponsorships for our workshops and speakers.'
+        'title' => 'Sponsors'
     ],
     'subjects' => [
-        'planning' => 'Planning',
-        'planning_description' => 'We aim to address themes related to enhancing cities through urban design, the impact of human behavior on urban planning, and the integration of sectoral policies for sustainable urban development and transitioning towards green energy.',
+        'planning' => 'Urban Planning',
+        'planning_description' => 'Join us as we explore the urban planning sector through enhancing cities and the urban life, how human behavior shapes the urban fabric, and the thrilling journey toward sustainable urban development and future cities!',
         'housing' => 'Housing',
-        'housing_description' => 'We aim to address themes related to enhancing cities through urban design, the impact of human behavior on urban planning, and the integration of sectoral policies for sustainable urban development and transitioning towards green energy.',
-        'resilience' => 'Resilience',
-        'resilience_description' => 'We aim to address themes related to enhancing cities through urban design, the impact of human behavior on urban planning, and the integration of sectoral policies for sustainable urban development and transitioning towards green energy.',
-        'school' => 'School',
-        'school_description' => 'We aim to address themes related to enhancing cities through urban design, the impact of human behavior on urban planning, and the integration of sectoral policies for sustainable urban development and transitioning towards green energy.',
+        'housing_description' => 'Delve into the housing sector and join the dynamic discussions from sustainable and social housing, financing solutions for housing, digital innovation and smart building design, and real estate development opportunities!',
+        'resilience' => 'City Resilience',
+        'resilience_description' => 'Be part of the City Resiliency sector as we dive into urban strategies combating climate change, identify effective policies to safeguard our cities, and learn from successful resilient experiences!',
+        'school' => 'FUTURE OF SCHOOL BUILDING',
+        'school_description' => 'Outlining the shape of future school buildings, the School Symposium envisions innovations to the design of school buildings, and gathers industry professionals to co-create strategies to nurture inclusive, inspiring learning environments!',
 
     ],
     'speakers' => [
@@ -36,11 +36,17 @@ return [
         'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.'
     ],
     'flash_back' => [
-        'title' => '2022 Flash Back',
-        'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.'
+        'title' => 'HIGHLIGHTS 2022',
+        'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.',
+        'button' => 'Visit Gallery',
+    ],
+    'feeds' => [
+        'title' => 'HIGHLIGHTS 2023',
+        'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.',
+        'button' => 'Visit Gallery',
     ],
     'schedule' => [
-        'title' => 'Our three day schedule is jam-packed with brilliant, creative, evil geniuses.',
+        'title' => 'Conference Agenda',
         'description' => 'The worst people in our industry giving the best talks you’ve ever seen. Nothing will be recorded and every attendee has to sign an NDA to watch the talks.'
     ],
     'news_letter' => [
@@ -54,7 +60,9 @@ return [
         'copy_right' => 'Copyright © 2023 UrbanOct. All rights reserved.',
     ],
     'activities' => [
-        'title' => 'Activities'
+        'title' => 'Activities',
+        'register_button' => 'Register Now',
+        'register_model_title' => 'Register to'
     ],
     'registration' => [
         'title' => 'Registration',

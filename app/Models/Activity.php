@@ -13,4 +13,9 @@ class Activity extends Model
     protected $guarded = [];
 
     public $translatable = ['title', 'description', 'cover', 'timing', 'location'];
+
+    public function activity_attendees()
+    {
+        return $this->hasMany(ActivityAttendee::class);
+    }
 }

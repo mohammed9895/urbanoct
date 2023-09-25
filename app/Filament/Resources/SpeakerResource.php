@@ -6,6 +6,7 @@ use App\Filament\Resources\SpeakerResource\Pages;
 use App\Filament\Resources\SpeakerResource\RelationManagers;
 use App\Models\Day;
 use App\Models\Speaker;
+use App\Models\Topic;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -31,7 +32,14 @@ class SpeakerResource extends Resource
                     ->required()
                     ->options(Day::all()->pluck('name', 'id'))
                     ->searchable(),
+                Forms\Components\Select::make('topic_id')
+                    ->required()
+                    ->options(Topic::all()->pluck('title', 'id'))
+                    ->searchable(),
                 Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('organization')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('bio')

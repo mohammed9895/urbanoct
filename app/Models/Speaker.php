@@ -10,7 +10,7 @@ class Speaker extends Model
 {
     use HasFactory, HasTranslations;
 
-     public $translatable = ['name', 'bio'];
+     public $translatable = ['name', 'bio', 'organization'];
 
     protected $guarded = [];
     protected $casts = [
@@ -22,8 +22,14 @@ class Speaker extends Model
         return $this->belongsTo(Day::class);
     }
 
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class);
+    }
+
     public function agendas()
     {
         return $this->hasMany(Agenda::class);
     }
+
 }

@@ -48,6 +48,7 @@ class AgendaResource extends Resource
                 Forms\Components\TextInput::make('timing')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\FileUpload::make('paper')->required(),
             ]);
     }
 

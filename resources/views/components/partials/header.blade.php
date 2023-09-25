@@ -23,6 +23,7 @@
             </div>
         </div>
         <div class="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end items-center">
+{{--            <a href="{{ route('feeds.index') }}" class="inline-flex justify-center rounded-2xl text-base font-semibold text-uo-blue hover:text-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-uo-green/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.feeds.title') }}</a>--}}
             <a href="{{ route('activities.index') }}" class="inline-flex justify-center rounded-2xl text-base font-semibold text-uo-blue hover:text-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-uo-green/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.activities.title') }}</a>
             <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mr-2 rtl:mr-0 rtl:ml-2" href="{{ route('registration.index') }}" wire:navigate>
                 {{ __('home.header.register_now') }}

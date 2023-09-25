@@ -11,7 +11,7 @@
             <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"></div>
             <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"></div>
         </div>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
             <div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 text-center">
                 <h1 class="font-display text-7xl font-bold tracking-tighter text-uo-pink lg:text-[115px]">
                     <span class="sr-only">{{ $title }}</span>

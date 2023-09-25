@@ -7,7 +7,7 @@
                         <div class="lg:pl-20">
                             <div class="max-w-xs px-2.5 lg:max-w-none"><img alt="" loading="lazy" width="800"
                                                                             height="800" decoding="async" data-nimg="1"
-                                                                            class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                                                                            class="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                                                                             sizes="(min-width: 1024px) 32rem, 20rem"
                                                                             src="/storage/{{ $speaker->image }}"
                                                                             style="color: transparent;"></div>
@@ -16,6 +16,11 @@
                             <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                                 {{ $speaker->name }}
                             </h1>
+
+                            <h1 class="text-4xl font-normal tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl mt-3">
+                                {{ $speaker->organization }}
+                            </h1>
+
                             <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                                 <p>
                                     {{ $speaker->bio }}
@@ -23,7 +28,7 @@
                             </div>
                             <div class="mt-16 sm:mt-20">
                                 <ul role="list"
-                                    class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-1 lg:grid-cols-2">
+                                    class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-1 lg:grid-cols-1">
                                     @foreach($speaker->agendas as $agenda)
                                         <li class="group relative flex flex-col items-start">
                                             <div
@@ -32,12 +37,13 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                                                 </svg>
                                             </div>
-                                            <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                                            <p class="relative z-10 mt-6 text-sm text-zinc-600 dark:text-zinc-400">{{ $agenda->day->date }} <span class="ml-2">{{ $agenda->timing }}</span></p>
+                                            <h2 class="mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                                                 <div
                                                     class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                                                <a href="#"><span
+                                                <a wire:click="download({{ $agenda }})" class="cursor-pointer"><span
                                                         class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                                                        class="relative z-10">{{ $agenda->title }}</span></a></h2>
+                                                        class="relative z-10 text-xl">{{ $agenda->title }}</span></a></h2>
                                             <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">{{ $agenda->description }}</p>
                                             <p class="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-uo-yellow dark:text-zinc-200">
                                                 <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">

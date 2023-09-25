@@ -11,18 +11,18 @@
             <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"></div>
             <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"></div>
         </div>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-50">
-            <div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 text-center">
-                <h1 class="font-display text-5xl font-bold tracking-tighter text-uo-blue lg:text-[115px]">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8 relative z-50">
+            <div class="mx-auto lg:px-12 text-center">
+                <h1 class="font-display text-6xl font-bold tracking-normal text-uo-blue lg:text-[115px] uppercase">
                     <span class="sr-only">{{ __('home.hero.main_title') }} - </span>
                     {{ __('home.hero.main_title') }}
                 </h1>
                 <br class="hidden lg:block">
-                <h1 class="font-display mt-3 text-4xl font-bold tracking-tighter text-uo-red lg:text-[59px]">
+                <h1 class="font-display mt-3 text-5xl font-bold text-uo-red lg:text-[59px] uppercase tracking-wide">
                     <span class="sr-only">{{ __('home.hero.sub_title') }} - </span>
                     {{ __('home.hero.sub_title') }}
                 </h1>
-                <p class="text-md mt-5 text-slate-500">
+                <p class="text-md mt-5 text-slate-500 text-center max-w-5xl mx-auto">
                     {{ __('home.hero.description') }}
                 </p>
                 <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
@@ -36,11 +36,11 @@
                     </div>
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.people_attending') }}</dt>
-                        <dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">2,091</dd>
+                        <dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">50k+</dd>
                     </div>
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.venue') }}</dt>
-                        <dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">{{ __('home.hero.ocec') }}</dd>
+                        <dd class="mt-0.5 text-xl font-semibold tracking-tight text-blue-900">{!! __('home.hero.ocec') !!}</dd>
                     </div>
                     <div class="text-center">
                         <dt class="text-sm text-uo-red">{{ __('home.hero.location') }}</dt>
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <section id="sponsors" aria-label="Sponsors" class="py-20 sm:py-32">
+    <section id="sponsors" aria-label="Sponsors" class="py-20 sm:py-14">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2
                 class="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-uo-yellow sm:text-5xl">
                 {{ __('home.sponsors.title') }}</h2>
@@ -59,7 +59,8 @@
                 class="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
                 @foreach($sponsors as $sponsor )
                     <div class="flex items-center justify-center">
-                        <img alt="Transistor" loading="lazy" width="158"  height="48" decoding="async" data-nimg="1" style="color:transparent"  src="storage/{{ $sponsor->logo }}">
+                        <img alt="Transistor" loading="lazy" width="158" height="48" decoding="async" data-nimg="1"
+                             style="color:transparent" src="storage/{{ $sponsor->logo }}">
                     </div>
                 @endforeach
             </div>
@@ -71,34 +72,43 @@
             <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
                 <button
                     class="flex flex-col items-start text-left bg-uo-dark-blue/10 p-8 rounded-lg border border-uo-dark-blue/10 group transition">
-                    <img src="{{ asset('images/main.svg') }}" class="h-20 transition group-hover:-scale-100" alt="">
-                    <h2 class="mt-6 text-2xl font-bold text-uo-dark-blue">{{ __('home.subjects.planning') }}</h2>
-                    <p class="text-sm mt-3 text-uo-dark-blue/60 text-left rtl:text-right">
+                    <div class="flex items-center">
+                        <img src="{{ asset('images/main.svg') }}" class="h-20 transition group-hover:-scale-100" alt="">
+                        <h2 class="text-5xl font-bold text-uo-dark-blue ml-4 uppercase rtl:mr-3">{{ __('home.subjects.planning') }}</h2>
+                    </div>
+                    <p class="text-sm text-uo-dark-blue/60  rtl:text-right mt-10 text-justify">
                         {{ __('home.subjects.planning_description') }}
                     </p>
                 </button>
                 <button
                     class="flex flex-col items-start bg-uo-pink/10 p-8 rounded-lg border border-uo-pink/10 peer-invalid:text-red-500 group">
-                    <img src="{{ asset('images/main2.svg') }}" class="h-20 group-hover:-scale-100 transition" alt="">
-                    <h2 class="mt-6 text-2xl font-bold text-uo-pink">{{ __('home.subjects.housing') }}</h2>
-                    <p class="text-sm mt-3 text-uo-pink/90 text-left rtl:text-right">
+                    <div class="flex items-center">
+                        <img src="{{ asset('images/main2.svg') }}" class="h-20 group-hover:-scale-100 transition"
+                             alt="">
+                        <h2 class="text-5xl font-bold text-uo-pink ml-4 uppercase rtl:mr-3">{{ __('home.subjects.housing') }}</h2>
+                    </div>
+                    <p class="text-sm text-uo-pink/90 text-left rtl:text-right mt-10">
                         {{ __('home.subjects.housing_description') }}
                     </p>
                 </button>
                 <button
                     class="flex flex-col items-start bg-uo-yellow/10 p-8 rounded-lg border border-uo-yellow/10 group">
-                    <img src="{{ asset('images/main3.svg') }}" class="h-20 group-hover:-rotate-90 transition" alt="">
-                    <h2 class="mt-6 text-2xl font-bold text-uo-yellow">{{ __('home.subjects.resilience') }}</h2>
-                    <p class="text-sm mt-3 text-uo-yellow/90 text-left rtl:text-right">
+                    <div class="flex items-center">
+                        <img src="{{ asset('images/main3.svg') }}" class="h-20 -rotate-90 group-hover:-rotate-180 transition" alt="">
+                        <h2 class="text-5xl font-bold text-uo-yellow uppercase rtl:mr-3">{{ __('home.subjects.resilience') }}</h2>
+                    </div>
+                    <p class="text-sm text-uo-yellow/90 text-left rtl:text-right mt-10">
                         {{ __('home.subjects.resilience_description') }}
                     </p>
                 </button>
                 <button
                     class="flex flex-col items-start bg-uo-green/10 p-8 rounded-lg border border-uo-green/10 peer-invalid:text-red-500 group">
-                    <img src="{{ asset('images/main4.svg') }}" class="h-20 group-hover:rotate-[360deg] transition"
-                         alt="">
-                    <h2 class="mt-6 text-2xl font-bold text-uo-green">{{ __('home.subjects.school') }}</h2>
-                    <p class="text-sm mt-3 text-uo-green/90 text-left rtl:text-right">
+                    <div class="flex items-center">
+                        <img src="{{ asset('images/main4.svg') }}" class="h-20 group-hover:rotate-[360deg] transition"
+                             alt="">
+                        <h2 class="text-4xl font-bold text-uo-green uppercase ml-4 text-left rtl:mr-3">{{ __('home.subjects.school') }}</h2>
+                    </div>
+                    <p class="text-sm mt-10 text-uo-green/90 text-left rtl:text-right">
                         {{ __('home.subjects.school_description') }}
                     </p>
                 </button>
@@ -106,62 +116,49 @@
         </div>
     </section>
 
-    <livewire:frontend.speackers  />
+    <livewire:frontend.speackers/>
 
     <section id="past" class="py-20 sm:py-32 px-5">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
-            <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 id="speakers-title"
-                    class="font-display text-4xl font-medium tracking-tighter text-uo-yellow sm:text-5xl">
-                    {{ __('home.flash_back.title') }}
-                </h2>
-                <p class="mt-4 font-display text-2xl tracking-tight text-blue-900">{{ __('home.flash_back.description') }}</p></div>
-        </div>
-        <livewire:frontend.slider />
-    </section>
-
-    <livewire:frontend.agendas />
-
-    @foreach($events as $event)
-        <section id="author" aria-labelledby="author-title"
-                 class="relative scroll-mt-14 pb-3 pt-8 sm:scroll-mt-32 sm:pb-16 sm:pt-10 lg:pt-16">
-            <div class="relative mx-auto max-w-5xl pt-16 sm:px-6">
-                <div class="bg-slate-50 pt-px sm:rounded-3xl">
-                    <div
-                        class="relative mx-auto -mt-24 h-44 w-44 md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)] lg:mr-20 lg:h-96 lg:w-96 rounded-lg rtl:lg:ml-20 rtl:md:float-left"
-                        style="background: url('storage/{{ $event->image }}'); background-size: cover; box-shadow: 5px 5px 0px {{ $event->color ?? '#ff4295' }}">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8 mb-20">
+            <div class="mx-auto container lg:mx-0">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 id="speakers-title"
+                            class="font-display text-4xl font-medium tracking-tighter text-uo-yellow sm:text-8xl">
+                            {{ __('home.flash_back.title') }}
+                        </h2>
                     </div>
-                    <div class="px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32"><h2
-                            class="inline-flex items-center rounded-full px-4 py-1 text-uo-red border ring-uo-red"
-                            style="border-color: {{ $event->color ?? '#ff4295' }};"
-                            id="author-title">
-                            <span class="text-uo-red font-medium tracking-tight"  style="color: {{ $event->color ?? '#ff4295' }};">{{ $event->sub_title }}</span></h2>
-                        <p class="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-                            <span class="block text-uo-red" style="color: {{ $event->color ?? '#ff4295' }};">{!! $event->title !!}</span> {!! $event->slogan !!}
-                        </p>
-                        <p class="mt-4 text-lg tracking-tight text-slate-700">
-                            {{ $event->description }}
-                        </p>
-
+                    <div>
+                        <a href="{{ route('gallery.index') }}" class="inline-flex justify-center rounded-2xl bg-uo-yellow p-6 text-base font-semibold text-white hover:bg-uo-pink focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.flash_back.button') }}</a>
                     </div>
                 </div>
+
             </div>
-        </section>
-    @endforeach
+        </div>
+        <livewire:frontend.slider/>
+    </section>
+
+    <livewire:frontend.agendas/>
+
+    <livewire:frontend.events />
     <section id="newsletter" aria-label="Newsletter">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div
-                class="relative -mx-4 overflow-hidden bg-indigo-50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-3xl md:px-16 xl:px-24 xl:py-36">
+                class="relative -mx-4 overflow-hidden bg-indigo-50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-3xl md:px-14 xl:px-12 xl:py-12">
                 <img alt="" loading="lazy" width="919" height="1351" decoding="async" data-nimg="1"
                      class="absolute left-1/2 top-0 translate-x-[-10%] translate-y-[-45%] lg:translate-x-[-32%] blur-3xl"
                      style="color:transparent" src="{{ asset('images/hero.svg') }}">
                 <div class="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
-                    <div><p class="font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">{{ __('home.news_letter.title') }}</p>
-                        <p class="mt-4 text-lg tracking-tight text-blue-900">{{ __('home.news_letter.description') }}</p></div>
-                    <form><h3 class="text-lg font-semibold tracking-tight text-blue-900">{{ __('home.news_letter.cta_text') }}</h3>
+                    <div>
+                        <p class="font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl rtl:lg:text-white">{{ __('home.news_letter.title') }}</p>
+                        <p class="mt-4 text-lg tracking-tight text-blue-900 rtl:lg:text-white">{{ __('home.news_letter.description') }}</p>
+                    </div>
+                    <form><h3
+                            class="text-lg font-semibold tracking-tight text-blue-900 rtl:lg:text-white">{{ __('home.news_letter.cta_text') }}</h3>
                         <div
                             class="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 rtl:pl-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-blue-900">
-                            <input type="email" required="" placeholder="{{ __('home.news_letter.email') }}" aria-label="Email address"
+                            <input type="email" required="" placeholder="{{ __('home.news_letter.email') }}"
+                                   aria-label="Email address"
                                    class="-my-2.5 flex-auto bg-transparent p-6 text-base text-slate-900 placeholder:text-slate-400 border-none active:ring-0 focus-within:ring-0 focus:ring-0">
                             <button
                                 class="inline-flex justify-center rounded-2xl bg-uo-red p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70"
@@ -180,7 +177,9 @@
             </div>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/floating.js/2.6.2/floating.js" integrity="sha512-n5IYFs4Ln9LoU6l75MoZTy7NpnqEo2PmYxJoiQOmPpsk/epcOX2ozdTJ9mEV29spCJTugzsH8mOx2nkVQ8cZdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/floating.js/2.6.2/floating.js"
+            integrity="sha512-n5IYFs4Ln9LoU6l75MoZTy7NpnqEo2PmYxJoiQOmPpsk/epcOX2ozdTJ9mEV29spCJTugzsH8mOx2nkVQ8cZdg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         floating({
             content: "<img src='{{asset('images/main.svg')}}' />",

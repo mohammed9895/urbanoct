@@ -16,6 +16,7 @@ class Agendas extends Component
     public $stage_id = 1;
 
     public $lg_days;
+    public $lg_stages;
 
     public function mount()
     {
@@ -25,6 +26,7 @@ class Agendas extends Component
             ->whereHas('agendas', fn($query) => $query->where('stage_id', '=',$this->stage_id)
             )
             ->get();
+        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)])->get();
         $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->get();
     }
 
@@ -46,6 +48,7 @@ class Agendas extends Component
     public function changeDay($id)
     {
         $this->day_id = $id;
+        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)])->get();
         $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->get();
     }
 }

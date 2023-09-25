@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Frontend;
 
+use App\Models\Agenda;
 use Livewire\Component;
 
 class Speaker extends Component
@@ -14,5 +15,15 @@ class Speaker extends Component
     public function render()
     {
         return view('livewire.frontend.speaker');
+    }
+
+    public function download(Agenda $agenda)
+    {
+        $file= storage_path('app/public/' . $agenda->paper);
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+        return response()->download($file, $agenda->title . ' paper.pdf', $headers);
     }
 }

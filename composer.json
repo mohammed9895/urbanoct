@@ -20,7 +20,9 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "owenvoke/blade-fontawesome": "^2.4"
+        "owenvoke/blade-fontawesome": "^2.4",
+        "wire-elements/modal": "^2.0",
+        "wireui/wireui": "^1.18"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
