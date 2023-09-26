@@ -1,7 +1,7 @@
 <div>
-    <div class="owl-carousel owl-theme" id="events">
+    <div class="owl-carousel owl-theme" id="events" dir="{{ app()->getLocale() == 'en' ? 'ltr' : 'rtl' }}">
         @foreach($events as $event)
-            <section id="author" aria-labelledby="author-title" dir="{{ app()->getLocale() == 'en' ? 'lrt' : 'rtl' }}"
+            <section id="author" aria-labelledby="author-title" dir="{{ app()->getLocale() == 'en' ? 'ltr' : 'rtl' }}"
                      class="relative scroll-mt-14 pt-8 sm:scroll-mt-32 sm: sm:pt-10 lg:pt-16">
                 <div class="relative mx-auto max-w-5xl pt-16 sm:px-6">
                     <div class="bg-slate-50 pt-px sm:rounded-3xl">

@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AttendeeResource\Pages;
-use App\Filament\Resources\AttendeeResource\RelationManagers;
-use App\Models\ActivityAttendee;
-use App\Models\Attendee;
+use App\Filament\Resources\FeedResource\Pages;
+use App\Filament\Resources\FeedResource\RelationManagers;
+use App\Models\Feed;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AttendeeResource extends Resource
+class FeedResource extends Resource
 {
-    protected static ?string $model = ActivityAttendee::class;
+    protected static ?string $model = Feed::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -24,22 +23,12 @@ class AttendeeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('fullname')
+                Forms\Components\TextInput::make('caption')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('country')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('organization')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('contact_number')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->required(),
             ]);
     }
 
@@ -47,16 +36,9 @@ class AttendeeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('fullname')
+                Tables\Columns\TextColumn::make('caption')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('organization')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('profession')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('contact_number')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -89,9 +71,9 @@ class AttendeeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAttendees::route('/'),
-            'create' => Pages\CreateAttendee::route('/create'),
-            'edit' => Pages\EditAttendee::route('/{record}/edit'),
+            'index' => Pages\ListFeeds::route('/'),
+            'create' => Pages\CreateFeed::route('/create'),
+            'edit' => Pages\EditFeed::route('/{record}/edit'),
         ];
     }
 }

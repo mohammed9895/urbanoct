@@ -24,7 +24,6 @@ class Speackers extends Component
     }
     public function changeDay($id)
     {
-        ray($id);
         $this->day_id = $id;
         $this->speakers = Speaker::where('day_id', $this->day_id)->get();
     }

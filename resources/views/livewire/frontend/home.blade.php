@@ -52,6 +52,7 @@
     </div>
 
 
+
     <livewire:frontend.feeds-slider/>
 
     <section id="sponsors" aria-label="Sponsors" class="py-20 sm:py-14">
