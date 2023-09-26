@@ -1,7 +1,7 @@
 <div>
     <div class="owl-carousel owl-theme" id="events">
         @foreach($events as $event)
-            <section id="author" aria-labelledby="author-title"
+            <section id="author" aria-labelledby="author-title" dir="{{ app()->getLocale() == 'en' ? 'lrt' : 'rtl' }}"
                      class="relative scroll-mt-14 pt-8 sm:scroll-mt-32 sm: sm:pt-10 lg:pt-16">
                 <div class="relative mx-auto max-w-5xl pt-16 sm:px-6">
                     <div class="bg-slate-50 pt-px sm:rounded-3xl">
@@ -31,7 +31,7 @@
             </section>
         @endforeach
     </div>
-    <div class="flex items-center justify-center mb-20">
+    <div class="flex items-center justify-center mb-20 flex-row-reverse rtl:flex-row">
         <div class="cursor-pointer text-white bg-uo-red p-3 rounded" id="prev">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

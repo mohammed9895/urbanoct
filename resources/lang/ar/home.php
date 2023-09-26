@@ -60,7 +60,9 @@ return [
         'copy_right' => 'جميع الحقوق محفوظة © لأكتوبر العمران ٢٠٢٣',
     ],
     'activities' => [
-        'title' => 'الفعاليات'
+        'title' => 'الفعاليات',
+        'register_button' => 'سجل الأن',
+        'register_model_title' => 'سجل في'
     ],
     'registration' => [
         'title' => 'التسجيل',
