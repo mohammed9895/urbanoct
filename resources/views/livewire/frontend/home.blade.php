@@ -99,7 +99,7 @@
                     class="flex flex-col items-start bg-uo-yellow/10 p-8 rounded-lg border border-uo-yellow/10 group">
                     <div class="flex items-center">
                         <img src="{{ asset('images/main3.svg') }}" class="h-20 -rotate-90 group-hover:-rotate-180 transition" alt="">
-                        <h2 class="text-5xl font-bold text-uo-yellow uppercase rtl:mr-3">{{ __('home.subjects.resilience') }}</h2>
+                        <h2 class="text-4xl font-bold text-uo-yellow uppercase rtl:mr-3">{{ __('home.subjects.resilience') }}</h2>
                     </div>
                     <p class="text-sm text-uo-yellow/90 text-left rtl:text-right mt-10">
                         {{ __('home.subjects.resilience_description') }}
