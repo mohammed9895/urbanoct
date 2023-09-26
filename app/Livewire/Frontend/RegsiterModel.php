@@ -7,6 +7,7 @@ use App\Models\Activity;
 use App\Models\ActivityAttendee;
 use App\Models\Attendee;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
@@ -32,8 +33,18 @@ class RegsiterModel extends ModalComponent
             'fullname' => 'required|string',
             'organization' => 'required|string',
             'field' => 'required|string',
-            'contact_number' => 'required|integer|unique:activity_attendees',
-            'email' => 'required|email|unique:activity_attendees',
+            'contact_number' => [
+                'required',
+                'integer',
+                Rule::unique('activity_attendees', 'contact_number')
+                    ->where('activity_id', $this->activity->id),
+            ],
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('activity_attendees', 'email')
+                    ->where('activity_id', $this->activity->id),
+                ]
         ], [
             'required' => __('home.validation.required'),
             'string' => __('home.validation.string'),
