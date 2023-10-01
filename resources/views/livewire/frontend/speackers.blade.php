@@ -59,7 +59,7 @@
                                 </div>
                                 <p class="mt-8 text-base tracking-tight text-slate-500">{{ $speaker->organization }}</p>
                                 <h3 class="mt-1 font-display text-xl font-bold tracking-tight text-slate-900">{{ $speaker->name }}</h3>
-                                <h3 class="mt-1 text-slate-500">{{ $speaker->agendas->first()->title }}</h3>
+                                <h3 class="mt-1 text-slate-500">{{ $speaker->agendas->first()->title ?? '' }}</h3>
                             </a>
                         @endforeach
                     </div>
