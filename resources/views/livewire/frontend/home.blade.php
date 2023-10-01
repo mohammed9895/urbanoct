@@ -32,7 +32,7 @@
                 <dl class="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-center lg:text-left">
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.speakers') }}</dt>
-                        <dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">18</dd>
+                        <dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">{{ $speakers }}</dd>
                     </div>
                     <div class="text-center">
                         <dt class="font-mono text-sm text-uo-red">{{ __('home.hero.people_attending') }}</dt>
