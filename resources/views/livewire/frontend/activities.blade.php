@@ -5,7 +5,7 @@
             @foreach($activities as $activity)
                 <div>
                     <div class="w-full h-96 rounded-lg border border-slate-400"
-                         style="background: url('{{ asset('images/slider/1.jpg') }}'); background-size: cover"></div>
+                         style="background: url('storage/{{ $activity->cover }}'); background-size: cover"></div>
                     <div class="flex justify-start items-center mt-4 text-sm">
                         <div class="mr-3 rtl:ml-3 rtl:mr-0 text-slate-400">
                             {{ $activity->timing }}
