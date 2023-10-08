@@ -12,7 +12,7 @@ class Activities extends Component
     public function mount()
     {
         $this->title = __('home.activities.title');
-        $this->activities = Activity::all();
+        $this->activities = Activity::all()->where('status', 1);
     }
     public function render()
     {

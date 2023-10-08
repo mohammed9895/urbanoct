@@ -43,6 +43,7 @@ class ActivityResource extends Resource
                 Forms\Components\TextInput::make('location')
                     ->required()
                     ->columnSpanFull(),
+                Forms\Components\Toggle::make('status'),
             ]);
     }
 
