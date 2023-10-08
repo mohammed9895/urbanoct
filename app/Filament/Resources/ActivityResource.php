@@ -54,6 +54,7 @@ class ActivityResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('location'),
                 Tables\Columns\ImageColumn::make('cover'),
+                Tables\Columns\ToggleColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
