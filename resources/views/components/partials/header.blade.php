@@ -1,6 +1,6 @@
 <header class="container mx-auto relative z-50 flex-none lg:pt-11">
     <div
-        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center sm:items-center justify-between sm:justify-between lg:flex-nowrap">
+        class="mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center sm:items-center justify-between sm:justify-between lg:flex-nowrap">
         <div class="mt-10 lg:mt-0 lg:grow lg:basis-0">
             <a href="/" wire:navigate>
                 <img src="{{ asset('images/logo-2.svg') }}" class="h-28 hover:scale-110 transition-all" alt="">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end items-center">
-{{--            <a href="{{ route('feeds.index') }}" class="inline-flex justify-center rounded-2xl text-base font-semibold text-uo-blue hover:text-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-uo-green/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.feeds.title') }}</a>--}}
+            <a href="{{ route('feeds.index') }}" class="inline-flex justify-center rounded-2xl text-base font-semibold text-uo-blue hover:text-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-uo-green/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.feeds.title') }}</a>
             <a href="{{ route('activities.index') }}" class="inline-flex justify-center rounded-2xl text-base font-semibold text-uo-blue hover:text-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-uo-green/70 mr-2 rtl:mr-0 rtl:ml-2" wire:navigate>{{ __('home.activities.title') }}</a>
             <a class="inline-flex justify-center rounded-2xl bg-uo-blue p-4 text-base font-semibold text-white hover:bg-uo-green focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mr-2 rtl:mr-0 rtl:ml-2" href="{{ route('registration.index') }}" wire:navigate>
                 {{ __('home.header.register_now') }}

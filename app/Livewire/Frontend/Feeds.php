@@ -11,7 +11,7 @@ class Feeds extends Component
     public function mount()
     {
         $this->title = __('home.feeds.title');
-        $this->feeds = \App\Models\Feed::all();
+        $this->feeds = \App\Models\Feed::all()->slice(4);
     }
     public function render()
     {
