@@ -7,6 +7,7 @@ use App\Filament\Resources\KeyNoteResource\RelationManagers;
 use App\Models\KeyNote;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -15,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class KeyNoteResource extends Resource
 {
+    use Translatable;
     protected static ?string $model = KeyNote::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

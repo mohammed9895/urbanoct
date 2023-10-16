@@ -120,8 +120,22 @@
         </div>
     </section>
 
+    <section id="past" class="py-20 sm:py-32 px-5">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8 mb-20">
+            <div class="mx-auto container lg:mx-0">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 id="speakers-title"
+                            class="font-display text-4xl font-medium tracking-tighter text-uo-blue sm:text-8xl">
+                            {{ __('home.key_notes.title') }}
+                        </h2>
+                    </div>
+                </div>
 
-    <livewire:frontend.key-notes/>
+            </div>
+        </div>
+        <livewire:frontend.key-notes/>
+    </section>
 
     <livewire:frontend.speackers/>
 

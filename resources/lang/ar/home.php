@@ -41,6 +41,9 @@ return [
         'description' => 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد ',
         'button' => 'معرض الصور',
     ],
+    'key_notes' => [
+        'title' => 'أبرز المتحدثين',
+    ],
     'feeds' => [
         'title' => 'معرض الصور ٢٠٢٣',
         'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.',

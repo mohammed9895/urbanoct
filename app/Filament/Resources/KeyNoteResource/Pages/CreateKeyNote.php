@@ -8,5 +8,13 @@ use Filament\Resources\Pages\CreateRecord;
 
 class CreateKeyNote extends CreateRecord
 {
+    use CreateRecord\Concerns\Translatable;
     protected static string $resource = KeyNoteResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+        ];
+    }
 }

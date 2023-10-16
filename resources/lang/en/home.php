@@ -40,6 +40,9 @@ return [
         'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.',
         'button' => 'Visit Gallery',
     ],
+    'key_notes' => [
+        'title' => 'KEYNOTES',
+    ],
     'feeds' => [
         'title' => 'HIGHLIGHTS 2023',
         'description' => 'Learn from the experts on the cutting-edge of deception at the most sinister companies.',
