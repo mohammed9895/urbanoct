@@ -23,11 +23,11 @@ class Agendas extends Component
         $this->stages = Stage::all();
         $this->days = Day::all();
         $this->lg_days = Day::with(['agendas' => fn($query) => $query->where('stage_id', '=', $this->stage_id)])
-            ->whereHas('agendas', fn($query) => $query->where('stage_id', '=',$this->stage_id)
+            ->whereHas('agendas', fn($query) => $query->where('stage_id', '=',$this->stage_id)->orderBy('position', 'asc')
             )
             ->get();
-        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)])->get();
-        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->get();
+        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)->orderBy('position', 'asc')])->get();
+        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->orderBy('position', 'asc')->get();
     }
 
     public function render()
@@ -39,16 +39,16 @@ class Agendas extends Component
     {
         $this->stage_id = $id;
         $this->lg_days = Day::with(['agendas' => fn($query) => $query->where('stage_id', '=', $this->stage_id)])
-            ->whereHas('agendas', fn($query) => $query->where('stage_id', '=',$this->stage_id)
+            ->whereHas('agendas', fn($query) => $query->where('stage_id', '=',$this->stage_id)->orderBy('position', 'asc')
             )
             ->get();
-        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->get();
+        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->orderBy('position', 'asc')->get();
     }
 
     public function changeDay($id)
     {
         $this->day_id = $id;
-        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)])->get();
-        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->get();
+        $this->lg_stages = Stage::with(['agendas' => fn($query) => $query->where('day_id', '=', $this->day_id)->orderBy('position', 'asc')])->get();
+        $this->agendas = Agenda::where('stage_id', $this->stage_id)->where('day_id', $this->day_id)->orderBy('position', 'asc')->get();
     }
 }

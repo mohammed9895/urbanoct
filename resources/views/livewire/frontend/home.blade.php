@@ -120,6 +120,9 @@
         </div>
     </section>
 
+
+    <livewire:frontend.key-notes/>
+
     <livewire:frontend.speackers/>
 
     <section id="past" class="py-20 sm:py-32 px-5">
